@@ -9,8 +9,7 @@ const markdownToHTML = (text) => {
   const converter = new showdown.Converter();
   return converter.makeHtml(text);
 }
-
-// AIzaSyAhpKDcQIcXgriMjaU8Yv_32S5Y9TBc_GQ
+// Função para perguntar à IA usando a API do Gemini
 const perguntarAI = async (question, game, apiKey) => {
   const model = "gemini-2.5-flash"
   const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
